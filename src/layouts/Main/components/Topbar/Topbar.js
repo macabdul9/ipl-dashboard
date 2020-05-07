@@ -34,6 +34,9 @@ const Topbar = props => {
     <AppBar
       {...rest}
       className={clsx(classes.root, className)}
+      color='primary'
+      position='fixed'
+      // style={{ background: '#7a7d83' }}
     >
       <Toolbar>
         <RouterLink to="/">
@@ -55,14 +58,14 @@ const Topbar = props => {
               
             </Badge>
           </IconButton>
-            <IconButton
+            {/* <IconButton
               className={classes.githubButton}
               color="inherit"
               onClick={() => window.open('https://www.github.com/macabdul9')}
             >
               <h5 style={{'marginRight':'20px'}}>Source Code</h5>
               <GitHubIcon />
-            </IconButton>
+            </IconButton> */}
         </Hidden>
         <Hidden lgUp>
           <IconButton

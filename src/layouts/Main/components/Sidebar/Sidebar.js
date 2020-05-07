@@ -69,11 +69,11 @@ const Sidebar = props => {
       href: '/contact',
       icon: <ContactMailIcon />
     },
-    // {
-    //   title: 'Source Code',
-    //   href: 'www.github.com',
-    //   icon: <GitHubIcon />
-    // },
+    {
+      title: 'Source Code',
+      href: '/',
+      icon: <GitHubIcon />
+    },
 
   ];
 

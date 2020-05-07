@@ -61,8 +61,10 @@ const SidebarNav = props => {
         {...rest}
         className={clsx(classes.root, className)}
       >
-        {pages.map(page => {
-          return (
+        {pages.map((page) => {
+          let component = null
+          if(page.title !== 'Source Code'){
+            component =  (
             <ListItem
             className={classes.item}
             disableGutters
@@ -79,6 +81,28 @@ const SidebarNav = props => {
             </Button>
           </ListItem>
           )
+        }else{
+          component =  (
+            <ListItem
+            className={classes.item}
+            disableGutters
+            key={page.title}
+          >
+            <Button
+              onClick={() => window.open('https://www.github.com/macabdul9')}
+              activeClassName={classes.active}
+              className={classes.button}
+              component={CustomRouterLink}
+              to={page.href}
+              
+            >
+              <div className={classes.icon}>{page.icon}</div>
+              {page.title}
+            </Button>
+          </ListItem>
+          )
+          }
+          return  component
         })}
       </List>
   );
