@@ -2,14 +2,23 @@ import React from 'react';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/styles';
-import { Card, CardContent, Grid, Typography, Avatar } from '@material-ui/core';
-import AttachMoneyIcon from '@material-ui/icons/AttachMoney';
+import {
+  Card,
+  CardContent,
+  Grid,
+  Typography,
+  Avatar,
+  LinearProgress
+} from '@material-ui/core';
+import InsertChartIcon from '@material-ui/icons/InsertChartOutlined';
+import PanToolIcon from '@material-ui/icons/PanTool';
+import AccessibilityNewIcon from '@material-ui/icons/AccessibilityNew';
 
 const useStyles = makeStyles(theme => ({
   root: {
     height: '100%',
-    backgroundColor: theme.palette.primary.main,
-    color: theme.palette.primary.contrastText
+    // backgroundColor: theme.palette.primary.main,
+    // color: theme.palette.primary.contrastText
   },
   content: {
     alignItems: 'center',
@@ -19,18 +28,17 @@ const useStyles = makeStyles(theme => ({
     fontWeight: 700
   },
   avatar: {
-    backgroundColor: theme.palette.white,
-    color: theme.palette.primary.main,
+    backgroundColor: theme.palette.warning.light,
     height: 56,
     width: 56
   },
   icon: {
     height: 32,
     width: 32
-  }
+  },
 }));
 
-const TotalProfit = props => {
+const Boundaries = props => {
   const { className, ...rest } = props;
 
   const classes = useStyles();
@@ -52,18 +60,15 @@ const TotalProfit = props => {
               gutterBottom
               variant="body2"
             >
-              TOTAL PROFIT
+              BOUNDARIES
+              <Typography variant="h3" color="inherit">21226 </Typography>
             </Typography>
-            <Typography
-              color="inherit"
-              variant="h3"
-            >
-              $23,200
-            </Typography>
+            <Typography variant="h6" color="inherit"><span>4s : </span> 15413 </Typography>
+            <Typography variant="h6" color="inherit"><span>6s : </span>5813</Typography>
           </Grid>
           <Grid item>
             <Avatar className={classes.avatar}>
-              <AttachMoneyIcon className={classes.icon} />
+              <AccessibilityNewIcon className={classes.icon} />
             </Avatar>
           </Grid>
         </Grid>
@@ -72,8 +77,8 @@ const TotalProfit = props => {
   );
 };
 
-TotalProfit.propTypes = {
+Boundaries.propTypes = {
   className: PropTypes.string
 };
 
-export default TotalProfit;
+export default Boundaries;

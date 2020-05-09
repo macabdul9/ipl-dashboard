@@ -3,12 +3,15 @@ import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/styles';
 import { Card, CardContent, Grid, Typography, Avatar } from '@material-ui/core';
-import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
-import PeopleIcon from '@material-ui/icons/PeopleOutlined';
+import SportsHandballIcon from '@material-ui/icons/SportsHandball';
+import SportsCricketIcon from '@material-ui/icons/SportsCricket';
+import SportsKabaddiIcon from '@material-ui/icons/SportsKabaddi';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    height: '100%'
+    height: '100%',
+    // backgroundColor: theme.palette.primary.main,
+    // color: theme.palette.primary.contrastText
   },
   content: {
     alignItems: 'center',
@@ -40,7 +43,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const TotalUsers = props => {
+const Runs = props => {
   const { className, ...rest } = props;
 
   const classes = useStyles();
@@ -58,42 +61,28 @@ const TotalUsers = props => {
           <Grid item>
             <Typography
               className={classes.title}
-              color="textSecondary"
+              color="inherit"
               gutterBottom
               variant="body2"
             >
-              TOTAL USERS
+              TOTAL RUNS SCORED
             </Typography>
-            <Typography variant="h3">1,600</Typography>
+            <Typography variant="h3" color="inherit">165950</Typography>
           </Grid>
+          
           <Grid item>
             <Avatar className={classes.avatar}>
-              <PeopleIcon className={classes.icon} />
+              <SportsCricketIcon className={classes.icon} />
             </Avatar>
           </Grid>
         </Grid>
-        <div className={classes.difference}>
-          <ArrowUpwardIcon className={classes.differenceIcon} />
-          <Typography
-            className={classes.differenceValue}
-            variant="body2"
-          >
-            16%
-          </Typography>
-          <Typography
-            className={classes.caption}
-            variant="caption"
-          >
-            Since last month
-          </Typography>
-        </div>
       </CardContent>
     </Card>
   );
 };
 
-TotalUsers.propTypes = {
+Runs.propTypes = {
   className: PropTypes.string
 };
 
-export default TotalUsers;
+export default Runs;

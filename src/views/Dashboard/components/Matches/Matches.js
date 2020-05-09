@@ -5,10 +5,15 @@ import { makeStyles } from '@material-ui/styles';
 import { Card, CardContent, Grid, Typography, Avatar } from '@material-ui/core';
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 import MoneyIcon from '@material-ui/icons/Money';
+import SportsCricketIcon from '@material-ui/icons/SportsCricket';
+import SportsHandballIcon from '@material-ui/icons/SportsHandball';
+import SportsKabaddiIcon from '@material-ui/icons/SportsKabaddi';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    height: '100%'
+    height: '100%',
+    // backgroundColor: theme.palette.primary.main,
+    // color: theme.palette.primary.contrastText
   },
   content: {
     alignItems: 'center',
@@ -40,7 +45,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const Budget = props => {
+const Matches = props => {
   const { className, ...rest } = props;
 
   const classes = useStyles();
@@ -58,21 +63,22 @@ const Budget = props => {
           <Grid item>
             <Typography
               className={classes.title}
-              color="textSecondary"
+              color="inherit"
               gutterBottom
               variant="body2"
             >
-              BUDGET
+              TOTAL MATCH PLAYED SO FAR (2016)
             </Typography>
-            <Typography variant="h3">$24,000</Typography>
+            <Typography variant="h3" color="inherit">577</Typography>
           </Grid>
           <Grid item>
             <Avatar className={classes.avatar}>
-              <MoneyIcon className={classes.icon} />
+              <SportsKabaddiIcon className={classes.icon} />
+              
             </Avatar>
           </Grid>
         </Grid>
-        <div className={classes.difference}>
+        {/* <div className={classes.difference}>
           <ArrowDownwardIcon className={classes.differenceIcon} />
           <Typography
             className={classes.differenceValue}
@@ -86,14 +92,14 @@ const Budget = props => {
           >
             Since last month
           </Typography>
-        </div>
+        </div> */}
       </CardContent>
     </Card>
   );
 };
 
-Budget.propTypes = {
+Matches.propTypes = {
   className: PropTypes.string
 };
 
-export default Budget;
+export default Matches;

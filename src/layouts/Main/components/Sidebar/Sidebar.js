@@ -12,6 +12,8 @@ import ShowChartIcon from '@material-ui/icons/ShowChart';
 import InsertChartIcon from '@material-ui/icons/InsertChart';
 import DescriptionIcon from '@material-ui/icons/Description';
 import GitHubIcon from '@material-ui/icons/GitHub';
+import { DiPython } from "react-icons/di";
+
 
 import {SidebarNav } from './components';
 
@@ -73,6 +75,11 @@ const Sidebar = props => {
       title: 'Source Code',
       href: '/',
       icon: <GitHubIcon />
+    },
+    {
+      title: 'EDA Notebook',
+      href: '/',
+      icon: <DiPython />
     },
 
   ];
