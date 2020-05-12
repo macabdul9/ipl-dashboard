@@ -26,6 +26,7 @@ const Footer = props => {
           component="a"
           href="https://github.com/macabdul9"
           target="_blank"
+          rel="noreferrer"
         >
           IPL Dashboard
         </Link>

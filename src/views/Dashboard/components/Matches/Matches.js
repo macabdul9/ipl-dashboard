@@ -3,17 +3,12 @@ import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/styles';
 import { Card, CardContent, Grid, Typography, Avatar } from '@material-ui/core';
-import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
-import MoneyIcon from '@material-ui/icons/Money';
-import SportsCricketIcon from '@material-ui/icons/SportsCricket';
-import SportsHandballIcon from '@material-ui/icons/SportsHandball';
 import SportsKabaddiIcon from '@material-ui/icons/SportsKabaddi';
 
 const useStyles = makeStyles(theme => ({
+
   root: {
     height: '100%',
-    // backgroundColor: theme.palette.primary.main,
-    // color: theme.palette.primary.contrastText
   },
   content: {
     alignItems: 'center',
@@ -67,32 +62,16 @@ const Matches = props => {
               gutterBottom
               variant="body2"
             >
-              TOTAL MATCH PLAYED SO FAR (2016)
+              <h4>TOTAL MATCH PLAYED SO FAR (2016)</h4>
             </Typography>
-            <Typography variant="h3" color="inherit">577</Typography>
+            <Typography variant="h4" color="inherit">577</Typography>
           </Grid>
           <Grid item>
             <Avatar className={classes.avatar}>
               <SportsKabaddiIcon className={classes.icon} />
-              
             </Avatar>
           </Grid>
         </Grid>
-        {/* <div className={classes.difference}>
-          <ArrowDownwardIcon className={classes.differenceIcon} />
-          <Typography
-            className={classes.differenceValue}
-            variant="body2"
-          >
-            12%
-          </Typography>
-          <Typography
-            className={classes.caption}
-            variant="caption"
-          >
-            Since last month
-          </Typography>
-        </div> */}
       </CardContent>
     </Card>
   );

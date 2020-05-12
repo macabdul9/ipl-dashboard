@@ -6,13 +6,13 @@ import { Main as MainLayout, Minimal as MinimalLayout } from './layouts';
 
 import {
   Dashboard as DashboardView,
-  ProductList as ProductListView,
-  UserList as UserListView,
+  Trivia as TriviaView,
+  Venues as VenuesView,
   Typography as TypographyView,
   Icons as IconsView,
-  Settings as SettingsView,
   NotFound as NotFoundView
 } from './views';
+
 
 const Routes = () => {
   return (
@@ -29,16 +29,16 @@ const Routes = () => {
         path="/dashboard"
       />
       <RouteWithLayout
-        component={UserListView}
+        component={TriviaView}
         exact
         layout={MainLayout}
         path="/trivia"
       />
       <RouteWithLayout
-        component={ProductListView}
+        component={VenuesView}
         exact
         layout={MainLayout}
-        path="/teams"
+        path="/venues"
       />
       <RouteWithLayout
         component={TypographyView}

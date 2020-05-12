@@ -1,5 +1,5 @@
 import React from 'react';
-import { Doughnut } from 'react-chartjs-2';
+import { Radar } from 'react-chartjs-2';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import { makeStyles, useTheme } from '@material-ui/styles';
@@ -38,7 +38,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const UsersByDevice = props => {
+const RunsRadar = props => {
   const { className, ...rest } = props;
 
   const classes = useStyles();
@@ -47,23 +47,25 @@ const UsersByDevice = props => {
   const data = {
     datasets: [
       {
-        data: [63, 15, 22],
-        backgroundColor: [
-          theme.palette.primary.main,
-          theme.palette.error.main,
-          theme.palette.warning.main
-        ],
-        borderWidth: 8,
-        borderColor: theme.palette.white,
-        hoverBorderColor: theme.palette.white
+        label:'Count',
+        data:[3245, 1028, 583, 326, 187, 148, 8, 6, 1],
+        backgroundColor: 'rgba(255,99,132,0.5)',
+        borderColor: 'rgba(255,99,132, 1)',
+        pointBackgroundColor: theme.palette.primary.dark,
+        pointBorderColor: '#fff',
+        pointHoverBackgroundColor: '#fff',
+        pointHoverBorderColor: 'rgba(255,99,132,1)',
       }
     ],
-    labels: ['Desktop', 'Tablet', 'Mobile']
+    labels: ['caught', 'bowled', 'run out', 'lbw', 'stumped',
+    'caught and bowled', 'retired hurt', 'hit wicket',
+    'obstructing the field']
   };
 
   const options = {
     legend: {
-      display: false
+      title:'Count',
+      display: true   
     },
     responsive: true,
     maintainAspectRatio: false,
@@ -80,29 +82,26 @@ const UsersByDevice = props => {
       titleFontColor: theme.palette.text.primary,
       bodyFontColor: theme.palette.text.secondary,
       footerFontColor: theme.palette.text.secondary
+    },
+    scale: {
+      reverse: false,
+      gridLines: {
+        color: [
+          'black',
+          'red',
+          'orange',
+          'yellow',
+          'green',
+          'blue',
+          'indigo',
+          'violet'
+        ]
+      },
+      ticks: {
+        beginAtZero: true
+      }
     }
   };
-
-  const devices = [
-    {
-      title: 'Desktop',
-      value: '63',
-      icon: <LaptopMacIcon />,
-      color: theme.palette.primary.main
-    },
-    {
-      title: 'Tablet',
-      value: '15',
-      icon: <TabletMacIcon />,
-      color: theme.palette.error.main
-    },
-    {
-      title: 'Mobile',
-      value: '23',
-      icon: <PhoneIphoneIcon />,
-      color: theme.palette.warning.main
-    }
-  ];
 
   return (
     <Card
@@ -110,45 +109,24 @@ const UsersByDevice = props => {
       className={clsx(classes.root, className)}
     >
       <CardHeader
-        action={
-          <IconButton size="small">
-            <RefreshIcon />
-          </IconButton>
-        }
-        title="Users By Device"
+        title="Dismissal Radar"
+        style={{'textAlign': 'center'}}
       />
       <Divider />
       <CardContent>
         <div className={classes.chartContainer}>
-          <Doughnut
+          <Radar
             data={data}
             options={options}
           />
-        </div>
-        <div className={classes.stats}>
-          {devices.map(device => (
-            <div
-              className={classes.device}
-              key={device.title}
-            >
-              <span className={classes.deviceIcon}>{device.icon}</span>
-              <Typography variant="body1">{device.title}</Typography>
-              <Typography
-                style={{ color: device.color }}
-                variant="h2"
-              >
-                {device.value}%
-              </Typography>
-            </div>
-          ))}
         </div>
       </CardContent>
     </Card>
   );
 };
 
-UsersByDevice.propTypes = {
+RunsRadar.propTypes = {
   className: PropTypes.string
 };
 
-export default UsersByDevice;
+export default RunsRadar;

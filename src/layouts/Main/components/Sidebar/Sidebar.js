@@ -58,7 +58,7 @@ const Sidebar = props => {
     },
     {
       title: 'Teams',
-      href: '/teams',
+      href: '/venues',
       icon: <SportsCricketIcon />
     },
     {

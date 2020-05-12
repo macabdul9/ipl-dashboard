@@ -65,9 +65,12 @@ const Runs = props => {
               gutterBottom
               variant="body2"
             >
-              TOTAL RUNS SCORED
+              <h3>TOTAL RUNS SCORED</h3>
+              <Typography variant="h4" color="inherit">173965</Typography>
             </Typography>
-            <Typography variant="h3" color="inherit">165950</Typography>
+           
+            <Typography variant="h5" color="inherit"><strong>Scored:</strong>165950</Typography>
+            <Typography variant="h5" color="inherit"><strong>Extras :</strong>8015</Typography>
           </Grid>
           
           <Grid item>
