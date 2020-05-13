@@ -56,10 +56,7 @@ const Balls = props => {
             >
               TOTAL BALL DELIVERED
             </Typography>
-            <Typography
-              color="inherit"
-              variant="h3"
-            >
+            <Typography color="inherit" variant="h4" >
               136590
             </Typography>
           </Grid>

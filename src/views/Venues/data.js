@@ -3,56 +3,276 @@ import uuid from 'uuid/v1';
 export default [
   {
     id: uuid(),
-    title: 'Dropbox',
-    description:
-      'Dropbox is a file hosting service that offers cloud storage, file synchronization, a personal cloud.',
-    imageUrl: '/images/products/product_1.png',
-    totalDownloads: '594',
-    updatedAt: '27/03/2019'
+    stadium: "M Chinnaswamy Stadium",
+    city: "Bangalore",
+    country: "India",
+    latitude: 12.9788,
+    longitude: 77.5998,
   },
   {
     id: uuid(),
-    title: 'Medium Corporation',
-    description:
-      'Medium is an online publishing platform developed by Evan Williams, and launched in August 2012.',
-    imageUrl: '/images/products/product_2.png',
-    totalDownloads: '625',
-    createdAt: '31/03/2019'
+    stadium: "Punjab Cricket Association Stadium",
+    city: "Chandigarh",
+    country: "India",
+    latitude: 30.6909,
+    longitude: 76.7375,
   },
   {
     id: uuid(),
-    title: 'Slack',
-    description:
-      'Slack is a cloud-based set of team collaboration tools and services, founded by Stewart Butterfield.',
-    imageUrl: '/images/products/product_3.png',
-    totalDownloads: '857',
-    createdAt: '03/04/2019'
+    stadium: "Feroz Shah Kotla",
+    city: "Delhi",
+    country: "India",
+    latitude: 28.6379,
+    longitude: 77.2432,
   },
   {
     id: uuid(),
-    title: 'Lyft',
-    description:
-      'Lyft is an on-demand transportation company based in San Francisco, California.',
-    imageUrl: '/images/products/product_4.png',
-    totalDownloads: '406',
-    createdAt: '04/04/2019'
+    stadium: "Wankhede Stadium",
+    city: "Mumbai",
+    country: "India",
+    latitude: 18.9389,
+    longitude: 72.8258,
   },
   {
     id: uuid(),
-    title: 'GitHub',
-    description:
-      'GitHub is a web-based hosting service for version control of code using Git.',
-    imageUrl: '/images/products/product_5.png',
-    totalDownloads: '835',
-    createdAt: '04/04/2019'
+    stadium: "Eden Gardens",
+    city: "Kolkata",
+    country: "India",
+    latitude: 22.5646,
+    longitude: 88.3433,
   },
   {
     id: uuid(),
-    title: 'Squarespace',
-    description:
-      'Squarespace provides software as a service for website building and hosting. Headquartered in NYC.',
-    imageUrl: '/images/products/product_6.png',
-    totalDownloads: '835',
-    createdAt: '04/04/2019'
-  }
+    stadium: "Rajiv Gandhi International Stadium",
+    city: "Hyderabad",
+    country: "India",
+    latitude: 17.4065,
+    longitude: 78.5505,
+  },
+ 
+  {
+    id: uuid(),
+    stadium: "MA Chidambaram Stadium",
+    city: "Chennai",
+    country: "India",
+    latitude: 13.0629,
+    longitude: 80.2792,
+  },
+  
+  {
+    id: uuid(),
+    stadium: "Dr DY Patil Sports Academy",
+    city: "Mumbai",
+    country: "India",
+    latitude: 19.0421,
+    longitude: 73.0267,
+  },
+ 
+  {
+    id: uuid(),
+    stadium: "Newlands",
+    city: "Cape Town",
+    country: "South Africa",
+    latitude: -33.9789,
+    longitude: 18.4684,
+  },
+  
+  {
+    id: uuid(),
+    stadium: "St George's Park",
+    city: "Port Elizabeth",
+    country: "South Africa",
+    latitude: -33.9651,
+    longitude: 25.6035,
+  },
+  
+  {
+    id: uuid(),
+    stadium: "Kingsmead Cricket Ground",
+    city: "Durban",
+    country: "South Africa",
+    latitude: -29.8502,
+    longitude: 31.0279,
+  },
+  
+  {
+    id: uuid(),
+    stadium: "SuperSport Park Cricket Stadium",
+    city: "Centurion",
+    country: "South Africa",
+    latitude: -25.8600,
+    longitude: 28.1955,
+  },
+  
+  {
+    id: uuid(),
+    stadium: "Bufflo Park",
+    city: "Eastt London",
+    country: "South Africa",
+    latitude: -33.0068,
+    longitude: 27.9196,
+  },
+  
+  {
+    id: uuid(),
+    stadium: "New Wanderers Stadium",
+    city: "Johannesburg",
+    country: "South Africa",
+    latitude: -26.1319,
+    longitude: 28.0577,
+  },
+  {
+    id: uuid(),
+    stadium: "De Beers Diamond Oval",
+    city: "Kimberley",
+    country: "South Africa",
+    latitude: -28.7425,
+    longitude: 24.7976,
+  },
+  {
+    id: uuid(),
+    stadium: "OUTsurance Oval",
+    city: "Bloemfontein",
+    country: "South Africa",
+    latitude: -26.2045,
+    longitude: 29.1176,
+  },
+ 
+  {
+    id: uuid(),
+    stadium: "Brabourne Stadium",
+    city: "Mumbai",
+    country: "India",
+    latitude: 18.9323,
+    longitude: 72.8247,
+  },
+  
+  {
+    id: uuid(),
+    stadium: "Sardar Patel Stadium",
+    city: "Ahmedabad",
+    country: "India",
+    latitude: 23.0918,
+    longitude: 72.5975,
+  },
+ 
+  {
+    id: uuid(),
+    stadium: "Barabati Stadium",
+    city: "Cuttack",
+    country: "India",
+    latitude: 20.4807,
+    longitude: 85.8686,
+  },
+  
+  {
+    id: uuid(),
+    stadium: "Vidarbha Cricket Association Stadium",
+    city: "Nagpur",
+    country: "India",
+    latitude: 21.0136,
+    longitude: 79.0397,
+  },
+  
+  {
+    id: uuid(),
+    stadium: "Himachal Pradesh Cricket Association Stadium",
+    city: "Dharamsala",
+    country: "India",
+    latitude: 32.1976,
+    longitude: 76.3258,
+  },
+  
+  {
+    id: uuid(),
+    stadium: "Nehru Stadium",
+    city: "Kochi",
+    country: "India",
+    latitude: 9.9973,
+    longitude: 76.3007,
+  },
+  
+  {
+    id: uuid(),
+    stadium: "Holkar Cricket Stadium",
+    city: "Indore",
+    country: "India",
+    latitude: 22.7243,
+    longitude: 75.8797,
+  },
+  
+  {
+    id: uuid(),
+    stadium: "Dr. Y.S. Rajasekhara Reddy ACA-VDCA Cricket Stadium",
+    city: "Visakhapatnam",
+    country: "India",
+    latitude: 17.7977,
+    longitude: 83.3523,
+  },
+  
+  {
+    id: uuid(),
+    stadium: "Subrata Roy Sahara Stadium",
+    city: "Pune",
+    country: "India",
+    latitude: 18.674,
+    longitude: 73.7065,
+  },
+  {
+    id: uuid(),
+    stadium: "JSCA International Stadium Complex",
+    city: "Raipur",
+    country: "India",
+    latitude: 21.2514,
+    longitude: 81.6296,
+  },
+  {
+    id: uuid(),
+    stadium: "Sheikh Zayed Stadium",
+    city: "Abu Dhabi",
+    country: "U.A.E",
+    latitude: 24.3966,
+    longitude: 54.5408,
+  },
+  {
+    id: uuid(),
+    stadium: "Sharjah Cricket Stadium",
+    city: "Abu Dhabi",
+    country: "U.A.E",
+    latitude: 25.3252 ,
+    longitude: 55.4192,
+  },
+  {
+    id: uuid(),
+    stadium: "Dubai International Cricket Stadium",
+    city: "Abu Dhabi",
+    country: "U.A.E",
+    latitude: 25.0413,
+    longitude: 55.2180,
+  },
+  {
+    id: uuid(),
+    stadium: "Maharashtra Cricket Association Stadium",
+    city: "Pune",
+    country: "India",
+    latitude: 18.6745,
+    longitude: 73.7065,
+  },
+  // {
+  //   id: uuid(),
+  //   stadium: "Punjab Cricket Association IS Bindra Stadium",
+  //   city: "Chandigarh",
+  //   country: "India",
+  //   latitude: 30.6909,
+  //   longitude: 76.7375,
+  // },
+  {
+    id: uuid(),
+    stadium: "Saurashtra Cricket Association Stadium",
+    city: "Rajkot",
+    country: "India",
+    latitude: 22.3617,
+    longitude:70.7091 ,
+  },
+  
 ];

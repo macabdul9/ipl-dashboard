@@ -2,13 +2,11 @@ import React from 'react';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/styles';
-import { Divider, Drawer } from '@material-ui/core';
+import { Drawer } from '@material-ui/core';
 
 import HelpIcon from '@material-ui/icons/Help';
-import TextFieldsIcon from '@material-ui/icons/TextFields';
 import SportsCricketIcon from '@material-ui/icons/SportsCricket';
 import ContactMailIcon from '@material-ui/icons/ContactMail';
-import ShowChartIcon from '@material-ui/icons/ShowChart';
 import InsertChartIcon from '@material-ui/icons/InsertChart';
 import DescriptionIcon from '@material-ui/icons/Description';
 import GitHubIcon from '@material-ui/icons/GitHub';
@@ -57,7 +55,7 @@ const Sidebar = props => {
       icon: <HelpIcon  />
     },
     {
-      title: 'Teams',
+      title: 'Venues',
       href: '/venues',
       icon: <SportsCricketIcon />
     },

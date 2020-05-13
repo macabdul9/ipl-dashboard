@@ -29,7 +29,7 @@ const Dashboard = () => {
 
   const tossLabel = ['Bat','Field']
   const wins = [173, 118]
-  const defeats = [143, 140]
+  // const defeats = [143, 140]
   const champions = [2, 0, 2, 2, 1, 0, 0, 1, 1, 0, 0, 0, 0]
   const runner_up = [4, 3, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0]
   const finaleLabel = ['Chennai Super Kings',
@@ -174,25 +174,6 @@ const Dashboard = () => {
           <UsersByDevice />
         </Grid>
 
-        
-        <Grid
-          item
-          lg={4}
-          md={6}
-          xl={4}
-          xs={12}
-        >
-          {/* <LatestProducts /> */}
-        </Grid>
-        <Grid
-          item
-          lg={12}
-          md={12}
-          xl={12}
-          xs={12}
-        >
-          <Awards />
-        </Grid>
 
         <Grid
           item
@@ -225,6 +206,17 @@ const Dashboard = () => {
         >
           <SeasonRuns />
         </Grid>
+
+        <Grid
+          item
+          lg={12}
+          md={12}
+          xl={12}
+          xs={12}
+        >
+          <Awards />
+        </Grid>
+        
 
       </Grid>
     </div>

@@ -53,7 +53,7 @@ const Awards = props => {
       className={clsx(classes.root, className)}
     >
       <CardHeader
-        title="Season Awards"
+        title="IPL Summary"
         style={{'textAlign': 'center'}}
         className={classes.avatar}
       />
@@ -65,7 +65,9 @@ const Awards = props => {
               <TableHead>
                 <TableRow >
                   <TableCell>Season</TableCell>
-                  <TableCell>Final Venue</TableCell>
+                  <TableCell>Final_Venue</TableCell>
+                  <TableCell>Final_Fixture</TableCell>
+                  <TableCell>Champion</TableCell>
                   <TableCell>Orange_Cap</TableCell>
                   <TableCell>Purple_Cap</TableCell>
                   <TableCell>Man_of_the_Series</TableCell>
@@ -79,6 +81,8 @@ const Awards = props => {
                   >
                     <TableCell>{order.season}</TableCell>
                     <TableCell>{order.venue}</TableCell>
+                    <TableCell>{order.fixture}</TableCell>
+                    <TableCell>{order.champion}</TableCell>
                     <TableCell>{order.Orange_Cap}</TableCell>
                     <TableCell>{order.Purple_Cap}</TableCell>
                     <TableCell>{order.Man_of_the_Series}</TableCell>

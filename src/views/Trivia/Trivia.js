@@ -20,10 +20,7 @@ const Trivia = () => {
 
   return (
     <div className={classes.root}>
-      <UsersToolbar />
-      <div className={classes.content}>
-        <UsersTable users={users} />
-      </div>
+      <h1>This is tirvia page</h1>
     </div>
   );
 };

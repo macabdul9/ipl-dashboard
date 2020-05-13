@@ -8,10 +8,8 @@ import {
   Grid,
   Typography,
   Avatar,
-  LinearProgress
 } from '@material-ui/core';
-import InsertChartIcon from '@material-ui/icons/InsertChartOutlined';
-import PanToolIcon from '@material-ui/icons/PanTool';
+
 import AccessibilityNewIcon from '@material-ui/icons/AccessibilityNew';
 
 const useStyles = makeStyles(theme => ({
@@ -54,17 +52,16 @@ const Boundaries = props => {
           justify="space-between"
         >
           <Grid item>
-            <Typography
-              className={classes.title}
+            <Typography className={classes.title}
               color="inherit"
               gutterBottom
               variant="body2"
             >
-              BOUNDARIES
-              <Typography variant="h3" color="inherit">21226 </Typography>
+              <h3>BOUNDARIES</h3>
+              <Typography variant="h4" color="inherit">21226 </Typography>
             </Typography>
-            <Typography variant="h6" color="inherit"><span>4s : </span> 15413 </Typography>
-            <Typography variant="h6" color="inherit"><span>6s : </span>5813</Typography>
+            <Typography variant="body2" color="inherit"><strong>4s : </strong> 15413 </Typography>
+            <Typography variant="body2" color="inherit"><strong>6s : </strong>5813</Typography>
           </Grid>
           <Grid item>
             <Avatar className={classes.avatar}>
