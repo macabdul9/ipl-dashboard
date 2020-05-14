@@ -59,16 +59,12 @@ const Sidebar = props => {
       href: '/venues',
       icon: <SportsCricketIcon />
     },
-    {
-      title: 'readme',
-      href: '/readme',
-      icon: <DescriptionIcon />
-    },
-    {
-      title: 'contact',
-      href: '/contact',
-      icon: <ContactMailIcon />
-    },
+    // {
+    //   title: 'readme',
+    //   href: '/readme',
+    //   icon: <DescriptionIcon />
+    // },
+
     {
       title: 'Source Code',
       href: '/',

@@ -8,8 +8,8 @@ import {
   Dashboard as DashboardView,
   Trivia as TriviaView,
   Venues as VenuesView,
-  Typography as TypographyView,
-  Icons as IconsView,
+  Readme as ReadmeView,
+  Contact as ContactView,
   NotFound as NotFoundView
 } from './views';
 
@@ -40,18 +40,18 @@ const Routes = () => {
         layout={MainLayout}
         path="/venues"
       />
-      <RouteWithLayout
-        component={TypographyView}
+      {/* <RouteWithLayout
+        component={ReadmeView}
         exact
         layout={MainLayout}
         path="/readme"
-      />
-      <RouteWithLayout
-        component={IconsView}
+      /> */}
+      {/* <RouteWithLayout
+        component={ContactView}
         exact
         layout={MainLayout}
         path="/contact"
-      />
+      /> */}
       <RouteWithLayout
         component={NotFoundView}
         exact

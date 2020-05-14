@@ -3,6 +3,8 @@ import { Pie } from 'react-chartjs-2';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import { makeStyles, useTheme } from '@material-ui/styles';
+// import Card as card from "react-bootstrap";
+
 import {
   Card,
   CardHeader,
@@ -10,6 +12,11 @@ import {
   Divider,
   Typography
 } from '@material-ui/core';
+
+// import { ReactHover } from 'react-hover';
+import ReactHover from 'react-hover';
+import { CustomCard } from '../CustomCard';
+import Header from '../Header'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -43,7 +50,7 @@ const Toss = props => {
     datasets: [
       {
         data: props.data,
-        labels:props.label,
+        // labels:props.label,
         backgroundColor: [
           'red',
           'green',
@@ -77,22 +84,19 @@ const Toss = props => {
     cutoutPercentage: 0,
     layout: { padding: 0 },
   };
-
+  const optionsCursorTrueWithMargin = {
+    followCursor: true,
+    shiftX: 120,
+    shiftY: -120
+  }
 
   return (
     <Card
       {...rest}
       className={clsx(classes.root, className)}
     >
-      <CardHeader
-        // action={
-        //   <IconButton size="small">
-        //     <ArrowDropDownIcon />
-        //   </IconButton>
-        // }
-        title={props.title}
-        style={{'textAlign': 'center'}}
-      />
+      <Header/>
+
       <Divider />
       <CardContent>
         <div className={classes.chartContainer}>

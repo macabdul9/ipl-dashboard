@@ -17,15 +17,9 @@ export const data = {
  'Rising Pune Supergiants'],
   datasets: [
     {
-      // label: 'Top-20 most M.O.T.M Winners ',
       backgroundColor: palette.primary.main,
       data: [50, 41, 39, 37, 35, 31, 30, 17, 13,  6,  4,  3,  2]
     },
-    // {
-    //   label: 'Last year',
-    //   backgroundColor: palette.neutral,
-    //   data: [11, 20, 12, 29, 30, 25, 13]
-    // }
   ]
 };
 

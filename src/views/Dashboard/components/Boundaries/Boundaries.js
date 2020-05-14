@@ -15,8 +15,6 @@ import AccessibilityNewIcon from '@material-ui/icons/AccessibilityNew';
 const useStyles = makeStyles(theme => ({
   root: {
     height: '100%',
-    // backgroundColor: theme.palette.primary.main,
-    // color: theme.palette.primary.contrastText
   },
   content: {
     alignItems: 'center',

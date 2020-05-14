@@ -3,15 +3,12 @@ import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/styles';
 import { Card, CardContent, Grid, Typography, Avatar } from '@material-ui/core';
-import AttachMoneyIcon from '@material-ui/icons/AttachMoney';
 import SportsHandballIcon from '@material-ui/icons/SportsHandball';
 
 
 const useStyles = makeStyles(theme => ({
   root: {
     height: '100%',
-    // backgroundColor: theme.palette.primary.main,
-    // color: theme.palette.primary.contrastText
   },
   content: {
     alignItems: 'center',
