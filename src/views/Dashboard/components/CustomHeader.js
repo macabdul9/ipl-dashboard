@@ -11,7 +11,7 @@ export class Header extends Component {
         const optionsCursorTrueWithMargin = {
             followCursor: true,
             shiftX: 10,
-            shiftY: -120
+            shiftY: -90
         }
         const title = this.props.header ? this.props.header.title : "Demo Title"
         console.log("CustomHeader.js", this.props.header);
