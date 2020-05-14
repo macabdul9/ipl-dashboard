@@ -67,13 +67,13 @@ const Sidebar = props => {
       title: 'Source Code',
       href: '/',
       icon: <GitHubIcon />,
-      link:'https://github.com/macabdul9/ipl-dashboard'
+      link:'https://www.github.com/macabdul9'
     },
     {
       title: 'EDA Notebook',
       href: '/',
       icon: <DiPython />,
-      link:'https://nbviewer.jupyter.org/github/macabdul9/ipl-dashboard/blob/master/notebooks/exploratory-data-analysis.ipynb'
+      link:'https://ab-cse.firebaseapp.com/'
     },
 
   ];
