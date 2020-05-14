@@ -1,6 +1,6 @@
 ## IPL Dashboard
 
-##### Live Demo: https://ipl-dashboard.web.app/dashboard
+### Live Demo:
 -  https://ipl-dashboard.web.app
 -  https://ipl-dashboard.firebaseapp.com
 
@@ -19,12 +19,13 @@
 ### 2. Optimized Loading Time : **Yes**
 - 97 Lighthouse score
 - Code splitting
-- Reused the components for different charts ie: All Pie charts plotted in the web are single component, used props and states to reuse the component.
-- All states were UI related hence didn't feel the need of using middleware for state management 
+- Reused components for different charts ie: All Pie charts in the web app are plotted by resuing single component, with the help of props and states.
+- All states were UI related hence didn't feel the need of using middleware for state management. 
 
 ### 3. Mobile Responsive: **Yes**
 - All visualization components are mobile responsive.
 - Chartjs 2 and material-ui components are responsive.
+- 
 ### 4. PWA : **Yes**
 - Uses HTTPS
 - Created manifest.json file that meets the installability requirements.
@@ -37,7 +38,7 @@
 
 
 
-### Lighthouse Score is attached bellow:
+### Lighthouse Score is attached below:
 ![image info](./assets/lighthouse.png)
 
 
