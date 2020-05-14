@@ -25,7 +25,7 @@
 ## Bonus Points
 
 ### 1. Vue.js: **No**
-- I feel comfortable with React.Js, although I am keen to learn Vui.js.
+- I am comfortable with React.Js, although I am keen to learn Vui.js.
 
 ### 2. Optimized Loading Time : **Yes**
 - 97 Lighthouse score
