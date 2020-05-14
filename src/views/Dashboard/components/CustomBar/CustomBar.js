@@ -2,63 +2,77 @@ import React from 'react';
 import { Bar } from 'react-chartjs-2';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
-import { makeStyles, useTheme } from '@material-ui/styles';
+import { makeStyles } from '@material-ui/styles';
+import palette from 'theme/palette';
 import {
   Card,
   CardContent,
   Divider,
 } from '@material-ui/core';
 
-import CustomHeader from '../CustomHeader'
+import CustomHeader from '../CustomHeader';
 
 const useStyles = makeStyles(theme => ({
+
   root: {
     height: '100%'
   },
+
   chartContainer: {
     position: 'relative',
     height: '300px'
   },
+
   stats: {
     marginTop: theme.spacing(2),
     display: 'flex',
     justifyContent: 'center'
   },
+
   device: {
     textAlign: 'center',
     padding: theme.spacing(1)
   },
+
   deviceIcon: {
     color: theme.palette.icon
   }
+
 }));
 
-const Toss = props => {
+const CustomBar = props => {
   const { className, ...rest } = props;
 
   const classes = useStyles();
-  const theme = useTheme();
+  // const theme = useTheme();
 
   const data = {
-    labels:props.label,
-    datasets: [
+    labels:props.data.labels,
+    datasets: props.data.stacked ? props.data.datasets : [
       {
-        // label: 'Top-20 most M.O.T.M Winners ',
-        label:props.score,
+        data: props.data.data,
         backgroundColor: [
-        "#F7464A", 
-        "#46BFBD", 
-        "#FDB45C", 
-        "#949FB1", 
-        "#4D5360", 
-        'black',
-        'orange',
-        'yellow',
-        'green',
-        'blue',
-        'indigo',
-        'violet'],
-        data: props.data
+          "#F7464A", 
+          "#46BFBD", 
+          "#FDB45C", 
+          "#949FB1", 
+          "#4D5360", 
+          'black',
+          'orange',
+          'yellow',
+          'green',
+          'blue',
+          'indigo',
+          'violet',
+          '#8C735C',
+          '#B68569',
+          '#67B2E5',
+          'skyblue',
+          '#B9A3BC',
+          '#29AA9E',
+          '#CCECF1',
+          '#73C7C7',
+      ]
       },
       // {
       //   label: 'Last year',
@@ -79,23 +93,23 @@ const Toss = props => {
       mode: 'index',
       intersect: false,
       borderWidth: 1,
-      borderColor: theme.palette.divider,
-      backgroundColor: theme.palette.white,
-      titleFontColor: theme.palette.text.primary,
-      bodyFontColor: theme.palette.text.secondary,
-      footerFontColor: theme.palette.text.secondary
+      borderColor: palette.divider,
+      backgroundColor: palette.white,
+      titleFontColor: palette.text.primary,
+      bodyFontColor: palette.text.secondary,
+      footerFontColor: palette.text.secondary
     },
     layout: { padding: 0 },
     scales: {
       xAxes: [
         {
-        //   text:'Runs',
+          stacked:props.data.stacked,
           barThickness: 16,
           maxBarThickness: 20,
           barPercentage: 0.5,
           categoryPercentage: 0.5,
           ticks: {
-            fontColor: theme.palette.text.secondary
+            fontColor: palette.text.secondary
           },
           gridLines: {
             display: false,
@@ -105,31 +119,27 @@ const Toss = props => {
       ],
       yAxes: [
         {
-        //   display: true,
+          stacked:props.data.stacked,
           ticks: {
-            fontColor: theme.palette.text.secondary,
+            fontColor: palette.text.secondary,
             beginAtZero: true,
             min: 0
-          },
-          scaleLabel: {
-            display: true,
-            labelString: props.labelString
           },
           gridLines: {
             borderDash: [2],
             borderDashOffset: [2],
-            color: theme.palette.divider,
+            color: palette.divider,
             drawBorder: false,
             zeroLineBorderDash: [2],
             zeroLineBorderDashOffset: [2],
-            // zeroLineColor: theme.CardContentpalette.divider
+            zeroLineColor: palette.divider
           }
         }
       ]
     }
     }
 
-
+  // console.log("TopScore.js", props.data.header);
   return (
     <Card
       {...rest}
@@ -139,7 +149,7 @@ const Toss = props => {
         title={props.title}
         style={{'textAlign': 'center'}}
       /> */}
-      <CustomHeader/>
+      <CustomHeader header={props.data.header}/>
       <Divider />
       <CardContent>
         <div className={classes.chartContainer}>
@@ -153,8 +163,8 @@ const Toss = props => {
   );
 };
 
-Toss.propTypes = {
+CustomBar.propTypes = {
   className: PropTypes.string
 };
 
-export default Toss;
+export default CustomBar;

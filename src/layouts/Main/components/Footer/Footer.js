@@ -32,9 +32,9 @@ const Footer = props => {
         </Link>
         . 2020
       </Typography>
-      <Typography variant="caption">
+      {/* <Typography variant="caption">
         MIT License
-      </Typography>
+      </Typography> */}
     </div>
   );
 };

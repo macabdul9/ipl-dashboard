@@ -50,7 +50,7 @@ const SeasonRuns = props => {
         style={{'textAlign': 'center'}}
         className={classes.avatar}
       /> */}
-      <CustomHeader/>
+      <CustomHeader header={props.data.header}/>
       <Divider />
       <CardContent>
         <div className={classes.chartContainer}>

@@ -49,7 +49,7 @@ export const Data = {
     },
     {
       label: '2016',
-      backgroundColor: '496695',
+      backgroundColor: '#496695',
       data: data['2016']
     }
 

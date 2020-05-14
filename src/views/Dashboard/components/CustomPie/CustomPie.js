@@ -35,7 +35,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const Toss = props => {
+const CustomPie = props => {
   const { className, ...rest } = props;
 
   const classes = useStyles();
@@ -44,8 +44,8 @@ const Toss = props => {
   const data = {
     datasets: [
       {
-        data: props.data,
-        // labels:props.label,
+        data: props.data.data,
+        // labels:props.data.labels,
         backgroundColor: [
           'red',
           'green',
@@ -66,7 +66,7 @@ const Toss = props => {
         hoverBorderColor: theme.palette.white
       }
     ],
-    labels: props.label
+    labels: props.data.labels
   };
 
   const options = {
@@ -79,13 +79,13 @@ const Toss = props => {
     cutoutPercentage: 0,
     layout: { padding: 0 },
   };
-
+  // console.log("CustomPie.js", props.data.data);
   return (
     <Card
       {...rest}
       className={clsx(classes.root, className)}
     >
-      <CustomHeader/>
+      <CustomHeader header={props.data.header}/>
 
       <Divider />
       <CardContent>
@@ -100,8 +100,8 @@ const Toss = props => {
   );
 };
 
-Toss.propTypes = {
+CustomPie.propTypes = {
   className: PropTypes.string
 };
 
-export default Toss;
+export default CustomPie;

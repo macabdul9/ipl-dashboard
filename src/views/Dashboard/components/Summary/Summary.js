@@ -58,7 +58,7 @@ const Awards = props => {
         style={{'textAlign': 'center'}}
         className={classes.avatar}
       /> */}
-      <CustomHeader/>
+      <CustomHeader header={props.data.header}/>
       <Divider />
       <CardContent className={classes.content}>
         <PerfectScrollbar>

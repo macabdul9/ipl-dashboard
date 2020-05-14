@@ -1,5 +1,6 @@
 /* eslint-disable react/no-multi-comp */
 /* eslint-disable react/display-name */
+
 import React, { forwardRef } from 'react';
 import { NavLink as RouterLink } from 'react-router-dom';
 import clsx from 'clsx';
@@ -62,25 +63,8 @@ const SidebarNav = props => {
       >
         {pages.map((page) => {
           let component = null
-          if(page.title !== 'Source Code'){
-            component =  (
-            <ListItem
-            className={classes.item}
-            disableGutters
-            key={page.title}
-          >
-            <Button
-              activeClassName={classes.active}
-              className={classes.button}
-              component={CustomRouterLink}
-              to={page.href}
-            >
-              <div className={classes.icon}>{page.icon}</div>
-              {page.title}
-            </Button>
-          </ListItem>
-          )
-        }else{
+          if(page.title === 'Source Code' || page.title === 'EDA Notebook'){
+
           component =  (
             <ListItem
             className={classes.item}
@@ -88,7 +72,7 @@ const SidebarNav = props => {
             key={page.title}
           >
             <Button
-              onClick={() => window.open('https://www.github.com/macabdul9')}
+              onClick={() => window.open(page.link)}
               activeClassName={classes.active}
               className={classes.button}
               component={CustomRouterLink}
@@ -100,12 +84,53 @@ const SidebarNav = props => {
             </Button>
           </ListItem>
           )
+        }
+        // if(page.title === 'EDA Notebook'){
+        //     component =  (
+        //       <ListItem
+        //       className={classes.item}
+        //       disableGutters
+        //       key={page.title}
+        //     >
+        //       <Button
+        //         onClick={() => window.open('www.google.com')}
+        //         activeClassName={classes.active}
+        //         className={classes.button}
+        //         component={CustomRouterLink}
+        //         to={page.href}
+                
+        //       >
+        //         <div className={classes.icon}>{page.icon}</div>
+        //         {page.title}
+        //       </Button>
+        //     </ListItem>
+        //     )
+        //   }
+          else{
+            component =  (
+              <ListItem
+              className={classes.item}
+              disableGutters
+              key={page.title}
+            >
+              <Button
+                activeClassName={classes.active}
+                className={classes.button}
+                component={CustomRouterLink}
+                to={page.href}
+              >
+                <div className={classes.icon}>{page.icon}</div>
+                {page.title}
+              </Button>
+            </ListItem>
+            )
           }
           return  component
         })}
       </List>
   );
 };
+
 
 SidebarNav.propTypes = {
   className: PropTypes.string,

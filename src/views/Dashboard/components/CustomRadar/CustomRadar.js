@@ -40,11 +40,12 @@ const CustomRadar = props => {
   const theme = useTheme();
 
   const data = {
+    labels: props.data.labels,
     datasets: [
       {
         label:'Count',
-        data:[55900, 50107, 15413,  8842,  5813,   473,    42],
-        backgroundColor: 'rgba(179,181,198,0.5)',
+        data:props.data.data,
+        backgroundColor: 'violet',
         borderColor: 'rgba(179,181,198,1)',
         pointBackgroundColor: theme.palette.primary.dark,
         pointBorderColor: '#fff',
@@ -52,7 +53,7 @@ const CustomRadar = props => {
         pointHoverBorderColor: 'rgba(179,181,198,1)'
       }
     ],
-    labels: [0, 1, 4, 2, 6, 3, 5]
+    
   };
 
   const options = {
@@ -101,7 +102,7 @@ const CustomRadar = props => {
       {...rest}
       className={clsx(classes.root, className)}
     >
-      <CustomHeader title="Radar"/>
+      <CustomHeader header = {props.data.header}/>
       <Divider />
       <CardContent>
         <div className={classes.chartContainer}>

@@ -1,10 +1,145 @@
 {
     "toss":{
-        "label":["Bat", "Field"],
+        "labels":["Bat", "Field"],
         "data": [173, 118],
         "header":{
             "title":"Toss vs Match Result",
-            "heading":
+            "heading":"Toss vs Match Result",
+            "text":"Do you know, Upon winning the toss a team is more likely to win the match if it chooses to bat first than the bowl (173/291 vs 118/291)"
         }
-    }  
+    },
+    "champion":{
+        "labels":["Chennai Super Kings",
+            "Royal Challengers Bangalore",
+            "Mumbai Indians",
+            "Kolkata Knight Riders",
+            "Rajasthan Royals",
+            "Kings XI Punjab",
+            "Delhi Daredevils",
+            "Sunrisers Hyderabad",
+            "Deccan Chargers",
+            "Pune Warriors",
+            "Gujarat Lions",
+            "Kochi Tuskers Kerala",
+            "Rising Pune Supergiants"],
+        "data":[2, 0, 2, 2, 1, 0, 0, 1, 1, 0, 0, 0, 0],
+        "header":{
+            "title":"Champions",
+            "heading":"Champions",
+            "text":"CSK, MI, and KKR has won the 6 titles out of total 9, 2-2-2 each. RCB has never won the title despite playing final 3 times."
+        }
+    }, 
+    "runner_up":{
+        "labels":["Chennai Super Kings",
+            "Royal Challengers Bangalore",
+            "Mumbai Indians",
+            "Kolkata Knight Riders",
+            "Rajasthan Royals",
+            "Kings XI Punjab",
+            "Delhi Daredevils",
+            "Sunrisers Hyderabad",
+            "Deccan Chargers",
+            "Pune Warriors",
+            "Gujarat Lions",
+            "Kochi Tuskers Kerala",
+            "Rising Pune Supergiants"],
+        "data":[4, 3, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0],
+        "header":{
+            "title":"Runner-ups",
+            "heading":"heading",
+            "text":"RCB has never won the title despite playing final 3 times."
+        }
+    },
+    "top_batsman":{
+        "labels":["SK Raina", "V Kohli", "RG Sharma", "G Gambhir", "CH Gayle", "RV Uthappa", 
+            "DA Warner", "MS Dhoni", "AB de Villiers", "S Dhawan"],
+        "data":[4273, 4246, 3963, 3817, 3633, 3560, 3507, 3399, 3373, 3245],
+        "header":{
+            "title":"Batting Leaderboard",
+            "heading":"Bowling Leaderboard",
+            "text":"In IPL 2016, Virat Kohli was in phenomical form and score 973 runs is just 16 innings, that was the highest ever in a single season."
+        }
+    },
+    "top_bowler":{
+        "labels":["SL Malinga", "Harbhajan Singh", "PP Chawla", "A Mishra", "DJ Bravo", "A Nehra", "R Ashwin", "PP Ojha", "Z Khan", "RP Singh"],
+        "data":[120, 107, 101, 100,  98,  81,  79,  76,  75,  74],
+        "header":{
+            "title":"Bowling Leaderboard",
+            "headeing":"Bowling Leaderboard",
+            "text":"Lasith Malina of Sri Lanka is the highest wicket taker in the IPL"
+        }
+    },
+    "MOTM":{
+        "labels":["CH Gayle", "YK Pathan", "AB de Villiers", "DA Warner", "RG Sharma", "SK Raina", "AM Rahane", "MS Dhoni", "G Gambhir", "MEK Hussey", "V Kohli", "V Sehwag", "SR Watson", "JH Kallis", "DR Smith", "A Mishra", "SE Marsh", "SR Tendulkar", "KA Pollard", "RA Jadeja"],
+        "data":[17, 16, 15, 14, 13, 13, 12, 12, 12, 12, 11, 11, 10, 10, 10,  9,  9, 8,  8,  7],
+        "header":{
+            "title":"Top-20 most MOTM award winners",
+            "headeing":"Top-20 Most MOTM award winner",
+            "text":"CH Gayle has won the record 17 MOTM awards surprisingle he has most sixes as well."
+        }
+    },
+    "WDRatio":{
+        "stacked":true,
+        "labels":["Chennai Super Kings", "Royal Challengers Bangalore", "Mumbai Indians", "Kolkata Knight Riders", 
+            "Rajasthan Royals", "Kings XI Punjab", "Delhi Daredevils", "Sunrisers Hyderabad", "Deccan Chargers", 
+            "Pune Warriors", "Gujarat Lions", "Kochi Tuskers Kerala", "Rising Pune Supergiants"],
+        "datasets": [
+            {
+              "label": "Win",
+              "backgroundColor": "#29AA9E",
+              "data": [50, 41, 39, 37, 35, 31, 30, 17, 13, 6, 4, 3, 2]
+            },
+            {
+              "label": "Defeat",
+              "backgroundColor": "#8C735C",
+              "data": [24, 35, 23, 25, 17, 34, 38, 13, 26, 17, 5, 4, 5]
+            }
+          ],
+        "header":{
+            "title":"Win/Defeat Ratio",
+            "headeing":"Win/Defeat Ratio",
+            "text":"CSK has most wins along with highest win-defeat ratio while DD has highest number of defeats."
+        }
+    },
+    "score":{
+        "radar":true,
+        "data":[55900, 50107, 15413,  8842,  5813,   473,    42],
+        "labels": [0, 1, 4, 2, 6, 3, 5],
+        "header":{
+            "title":"Score",
+            "headeing":"Win/Defeat Ratio",
+            "text":"Do you know RCB has score highest number of 6s while KKR has highest number of 1s."
+        }
+    },
+    "dismissal":{
+        "radar":true,
+        "data":[3245, 1028, 583, 326, 187, 148, 8, 6, 1],
+        "labels": ["caught", "bowled", "run out", "lbw", "stumped",
+        "caught and bowled", "retired hurt", "hit wicket",
+        "obstructing the field"],
+        "header":{
+            "title":"Dismissal",
+            "headeing":"Dismissal",
+            "text":"Do you know once a player was given out for obstructing the field."
+        }
+    },
+    "season":{
+        "data":[],
+        "labels":[],
+        "header":{
+            "title":"Total Runs",
+            "headeing":"Total Runs",
+            "text":"In IPL 2016, Virat Kohli has score 4 centuries, that was the highest ever in a single season"
+        }
+    },
+    "summary":{
+        "data":[],
+        "labels":[],
+        "header":{
+            "title":"IPL Summary",
+            "headeing":"Summary",
+            "text":"CSK has played final record 6 times out of 9 but won only 2 times"
+        }
+    }
+
 }

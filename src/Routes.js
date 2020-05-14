@@ -1,12 +1,11 @@
 import React from 'react';
 import { Switch, Redirect } from 'react-router-dom';
-
 import { RouteWithLayout } from './components';
 import { Main as MainLayout, Minimal as MinimalLayout } from './layouts';
 
+
 import {
   Dashboard as DashboardView,
-  Trivia as TriviaView,
   Venues as VenuesView,
   NotFound as NotFoundView
 } from './views';
@@ -26,12 +25,12 @@ const Routes = () => {
         layout={MainLayout}
         path="/dashboard"
       />
-      <RouteWithLayout
+      {/* <RouteWithLayout
         component={TriviaView}
         exact
         layout={MainLayout}
         path="/trivia"
-      />
+      /> */}
       <RouteWithLayout
         component={VenuesView}
         exact

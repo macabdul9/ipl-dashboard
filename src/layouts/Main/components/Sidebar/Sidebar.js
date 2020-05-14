@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/styles';
 import { Drawer } from '@material-ui/core';
 
-import HelpIcon from '@material-ui/icons/Help';
+// import HelpIcon from '@material-ui/icons/Help';
 import SportsCricketIcon from '@material-ui/icons/SportsCricket';
 import InsertChartIcon from '@material-ui/icons/InsertChart';
 import GitHubIcon from '@material-ui/icons/GitHub';
@@ -47,11 +47,11 @@ const Sidebar = props => {
       href: '/dashboard',
       icon: <InsertChartIcon />
     },
-    {
-      title: 'Trivia',
-      href: '/trivia',
-      icon: <HelpIcon  />
-    },
+    // {
+    //   title: 'Trivia',
+    //   href: '/trivia',
+    //   icon: <HelpIcon  />
+    // },
     {
       title: 'Venues',
       href: '/venues',
@@ -66,12 +66,14 @@ const Sidebar = props => {
     {
       title: 'Source Code',
       href: '/',
-      icon: <GitHubIcon />
+      icon: <GitHubIcon />,
+      link:'https://www.github.com/macabdul9'
     },
     {
       title: 'EDA Notebook',
       href: '/',
-      icon: <DiPython />
+      icon: <DiPython />,
+      link:'https://ab-cse.firebaseapp.com/'
     },
 
   ];
