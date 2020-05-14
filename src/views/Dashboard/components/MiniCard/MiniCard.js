@@ -2,8 +2,8 @@ import React from 'react';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/styles';
-import { Card, CardContent, Grid, Typography, Avatar } from '@material-ui/core';
-import SportsHandballIcon from '@material-ui/icons/SportsHandball';
+import { Card, CardContent, Grid, Typography } from '@material-ui/core';
+// import SportsHandballIcon from '@material-ui/icons/SportsHandball';
 
 
 const useStyles = makeStyles(theme => ({

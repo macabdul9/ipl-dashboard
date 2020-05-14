@@ -7,9 +7,7 @@ import { makeStyles } from '@material-ui/styles';
 import {
   Card,
   CardContent,
-  CardActions,
   Divider,
-  Button
 } from '@material-ui/core';
 
 

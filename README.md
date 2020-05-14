@@ -1,11 +1,22 @@
 ## IPL Dashboard
 
-### Live Demo:
+### Live Demo
 -  https://ipl-dashboard.web.app
 -  https://ipl-dashboard.firebaseapp.com
 
+### EDA Notebook
+- https://nbviewer.jupyter.org/github/macabdul9/ipl-dashboard/blob/master/notebooks/exploratory-data-analysis.ipynb
+  
+  
+### Libraries/Packages/Language Used
 
-### Major Libraries/Packges Used
+#### EDA Notebook
+- Python
+- Pandas 
+- Seaborn
+- Plotly
+
+#### Web App
 - reactjs
 - material-ui
 - chartjs 2

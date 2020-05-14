@@ -14,7 +14,7 @@ export class Header extends Component {
             shiftY: -120
         }
         const title = this.props.header ? this.props.header.title : "Demo Title"
-        console.log("CustomHeader.js", this.props.header);
+        // console.log("CustomHeader.js", this.props.header);
         return (
             
             <ReactHover options={optionsCursorTrueWithMargin}>
