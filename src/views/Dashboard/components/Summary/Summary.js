@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/styles';
 import {
   Card,
-  CardHeader,
   CardContent,
   Divider,
   Table,
@@ -16,6 +15,8 @@ import {
 } from '@material-ui/core';
 
 import mockData from './data';
+
+import CustomHeader from '../CustomHeader'
 
 const useStyles = makeStyles(theme => ({
   root: {},
@@ -52,11 +53,12 @@ const Awards = props => {
       {...rest}
       className={clsx(classes.root, className)}
     >
-      <CardHeader
+      {/* <CardHeader
         title="IPL Summary"
         style={{'textAlign': 'center'}}
         className={classes.avatar}
-      />
+      /> */}
+      <CustomHeader/>
       <Divider />
       <CardContent className={classes.content}>
         <PerfectScrollbar>

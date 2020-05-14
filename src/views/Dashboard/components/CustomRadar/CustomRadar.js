@@ -5,16 +5,11 @@ import PropTypes from 'prop-types';
 import { makeStyles, useTheme } from '@material-ui/styles';
 import {
   Card,
-  CardHeader,
   CardContent,
-  IconButton,
   Divider,
-  Typography
 } from '@material-ui/core';
-import LaptopMacIcon from '@material-ui/icons/LaptopMac';
-import PhoneIphoneIcon from '@material-ui/icons/PhoneIphone';
-import RefreshIcon from '@material-ui/icons/Refresh';
-import TabletMacIcon from '@material-ui/icons/TabletMac';
+
+import CustomHeader from '../CustomHeader'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -38,7 +33,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const RunsRadar = props => {
+const CustomRadar = props => {
   const { className, ...rest } = props;
 
   const classes = useStyles();
@@ -48,23 +43,21 @@ const RunsRadar = props => {
     datasets: [
       {
         label:'Count',
-        data:[3245, 1028, 583, 326, 187, 148, 8, 6, 1],
-        backgroundColor: 'rgba(255,99,132,0.5)',
-        borderColor: 'rgba(255,99,132, 1)',
+        data:[55900, 50107, 15413,  8842,  5813,   473,    42],
+        backgroundColor: 'rgba(179,181,198,0.5)',
+        borderColor: 'rgba(179,181,198,1)',
         pointBackgroundColor: theme.palette.primary.dark,
         pointBorderColor: '#fff',
         pointHoverBackgroundColor: '#fff',
-        pointHoverBorderColor: 'rgba(255,99,132,1)',
+        pointHoverBorderColor: 'rgba(179,181,198,1)'
       }
     ],
-    labels: ['caught', 'bowled', 'run out', 'lbw', 'stumped',
-    'caught and bowled', 'retired hurt', 'hit wicket',
-    'obstructing the field']
+    labels: [0, 1, 4, 2, 6, 3, 5]
   };
 
   const options = {
     legend: {
-      title:'Count',
+      title:'Display',
       display: true   
     },
     responsive: true,
@@ -108,10 +101,7 @@ const RunsRadar = props => {
       {...rest}
       className={clsx(classes.root, className)}
     >
-      <CardHeader
-        title="Dismissal Radar"
-        style={{'textAlign': 'center'}}
-      />
+      <CustomHeader title="Radar"/>
       <Divider />
       <CardContent>
         <div className={classes.chartContainer}>
@@ -125,8 +115,8 @@ const RunsRadar = props => {
   );
 };
 
-RunsRadar.propTypes = {
+CustomRadar.propTypes = {
   className: PropTypes.string
 };
 
-export default RunsRadar;
+export default CustomRadar;

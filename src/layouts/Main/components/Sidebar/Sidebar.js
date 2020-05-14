@@ -6,9 +6,7 @@ import { Drawer } from '@material-ui/core';
 
 import HelpIcon from '@material-ui/icons/Help';
 import SportsCricketIcon from '@material-ui/icons/SportsCricket';
-import ContactMailIcon from '@material-ui/icons/ContactMail';
 import InsertChartIcon from '@material-ui/icons/InsertChart';
-import DescriptionIcon from '@material-ui/icons/Description';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import { DiPython } from "react-icons/di";
 

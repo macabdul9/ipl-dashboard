@@ -8,8 +8,6 @@ import {
   Dashboard as DashboardView,
   Trivia as TriviaView,
   Venues as VenuesView,
-  Readme as ReadmeView,
-  Contact as ContactView,
   NotFound as NotFoundView
 } from './views';
 

@@ -5,10 +5,11 @@ import PropTypes from 'prop-types';
 import { makeStyles, useTheme } from '@material-ui/styles';
 import {
   Card,
-  CardHeader,
   CardContent,
   Divider,
 } from '@material-ui/core';
+
+import CustomHeader from '../CustomHeader'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -134,10 +135,11 @@ const Toss = props => {
       {...rest}
       className={clsx(classes.root, className)}
     >
-      <CardHeader
+      {/* <CardHeader
         title={props.title}
         style={{'textAlign': 'center'}}
-      />
+      /> */}
+      <CustomHeader/>
       <Divider />
       <CardContent>
         <div className={classes.chartContainer}>

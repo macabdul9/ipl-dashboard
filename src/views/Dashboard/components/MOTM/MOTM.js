@@ -5,14 +5,13 @@ import { Bar } from 'react-chartjs-2';
 import { makeStyles } from '@material-ui/styles';
 import {
   Card,
-  CardHeader,
   CardContent,
   CardActions,
   Divider,
   Button
 } from '@material-ui/core';
-import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
-import ArrowRightIcon from '@material-ui/icons/ArrowRight';
+
+import CustomHeader from '../CustomHeader'
 
 import { data, options } from './chart';
 
@@ -27,9 +26,6 @@ const useStyles = makeStyles((theme) => ({
   },
   avatar: {
     backgroundColor: theme.palette.info.light,
-    // color: theme.palette.white,
-    // height: 56,
-    // width: 56
   },
 }));
 
@@ -43,11 +39,12 @@ const MOTM = props => {
       {...rest}
       className={clsx(classes.root, className)}
     >
-      <CardHeader
+      {/* <CardHeader
         title="Top-20 most M.O.T.M award winners"
         style={{'textAlign': 'center'}}
         className={classes.avatar}
-      />
+      /> */}
+      <CustomHeader/>
       <Divider />
       <CardContent>
         <div className={classes.chartContainer}>
@@ -64,7 +61,6 @@ const MOTM = props => {
           size="small"
           variant="text"
         >
-          {/* Overview <ArrowRightIcon /> */}
         </Button>
       </CardActions>
     </Card>

@@ -7,16 +7,11 @@ import { makeStyles, useTheme } from '@material-ui/styles';
 
 import {
   Card,
-  CardHeader,
   CardContent,
   Divider,
-  Typography
 } from '@material-ui/core';
 
-// import { ReactHover } from 'react-hover';
-import ReactHover from 'react-hover';
-import { CustomCard } from '../CustomCard';
-import Header from '../Header'
+import CustomHeader from '../CustomHeader'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -84,18 +79,13 @@ const Toss = props => {
     cutoutPercentage: 0,
     layout: { padding: 0 },
   };
-  const optionsCursorTrueWithMargin = {
-    followCursor: true,
-    shiftX: 120,
-    shiftY: -120
-  }
 
   return (
     <Card
       {...rest}
       className={clsx(classes.root, className)}
     >
-      <Header/>
+      <CustomHeader/>
 
       <Divider />
       <CardContent>

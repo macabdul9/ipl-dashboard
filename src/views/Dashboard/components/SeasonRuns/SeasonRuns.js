@@ -6,14 +6,14 @@ import { Line } from 'react-chartjs-2';
 import { makeStyles } from '@material-ui/styles';
 import {
   Card,
-  CardHeader,
   CardContent,
   CardActions,
   Divider,
   Button
 } from '@material-ui/core';
-import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
-import ArrowRightIcon from '@material-ui/icons/ArrowRight';
+
+
+import CustomHeader from '../CustomHeader';
 
 import { Data, options } from './chart';
 
@@ -34,6 +34,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+
 const SeasonRuns = props => {
   const { className, ...rest } = props;
 
@@ -44,11 +45,12 @@ const SeasonRuns = props => {
       {...rest}
       className={clsx(classes.root, className)}
     >
-      <CardHeader
-        title="Most wins by the teams"
+      {/* <CardHeader
+        title="Total runs score in each match"
         style={{'textAlign': 'center'}}
         className={classes.avatar}
-      />
+      /> */}
+      <CustomHeader/>
       <Divider />
       <CardContent>
         <div className={classes.chartContainer}>
@@ -65,7 +67,6 @@ const SeasonRuns = props => {
           size="small"
           variant="text"
         >
-           {/* <ArrowRightIcon /> */}
         </Button>
       </CardActions>
     </Card>

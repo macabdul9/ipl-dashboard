@@ -10,12 +10,11 @@ import {
   Balls,
   MOTM,
   Victories,
-  RunsRadar,
+  CustomRadar,
   Toss,
   TopScorer,
   SeasonRuns,
-  UsersByDevice,
-  Awards
+  Summary
 } from './components';
 
 const useStyles = makeStyles(theme => ({
@@ -142,7 +141,7 @@ const Dashboard = () => {
           xl={9}
           xs={12}
         >
-          <Victories RunsRadar/>
+          <Victories/>
         </Grid>
         <Grid
           item
@@ -151,7 +150,7 @@ const Dashboard = () => {
           xl={3}
           xs={12}
         >
-          <RunsRadar />
+          <CustomRadar />
         </Grid>
 
         <Grid
@@ -171,7 +170,7 @@ const Dashboard = () => {
           xl={3}
           xs={12}
         >
-          <UsersByDevice />
+          <CustomRadar />
         </Grid>
 
 
@@ -214,7 +213,7 @@ const Dashboard = () => {
           xl={12}
           xs={12}
         >
-          <Awards />
+          <Summary />
         </Grid>
         
 

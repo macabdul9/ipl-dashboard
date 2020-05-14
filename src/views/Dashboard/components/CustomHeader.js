@@ -19,13 +19,9 @@ export class Header extends Component {
                         title="Demo title"
                         style={{'textAlign': 'center'}}
                     />
-                    {/* <h1>Hover me !</h1> */}
-                    {/* <TriggerComponent/> */}
                 </ReactHover.Trigger>
                 <ReactHover.Hover type='hover'>
-                {/* <HoverComponent/> */}
                     <CustomCard/>
-                    
                 </ReactHover.Hover>
                 </ReactHover>
            

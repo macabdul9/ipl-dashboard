@@ -1,0 +1,10 @@
+{
+    "toss":{
+        "label":["Bat", "Field"],
+        "data": [173, 118],
+        "header":{
+            "title":"Toss vs Match Result",
+            "heading":
+        }
+    }  
+}

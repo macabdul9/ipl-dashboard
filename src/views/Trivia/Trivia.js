@@ -29,9 +29,9 @@ const variants = {
     'CSK, MI, and KKR has won the 6 title out of total 9 times, 2-2 each.',
   Trivia2:
     'RCB has never won the title despite being 3 times in the final.',
-  body4:
+  body7:
     'CSK has record of playing highest number of final 7 out of 9.',
-  body5:
+  body9:
     'CH Gayle has scored highest number of sixes.',
   
   
