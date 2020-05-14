@@ -3,10 +3,10 @@ import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/styles';
 import { Card, CardContent, Grid, Typography, Avatar } from '@material-ui/core';
-import SportsKabaddiIcon from '@material-ui/icons/SportsKabaddi';
+import SportsHandballIcon from '@material-ui/icons/SportsHandball';
+
 
 const useStyles = makeStyles(theme => ({
-
   root: {
     height: '100%',
   },
@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme => ({
     fontWeight: 700
   },
   avatar: {
-    backgroundColor: theme.palette.error.main,
+    backgroundColor: theme.palette.success.main,
     height: 56,
     width: 56
   },
@@ -32,15 +32,15 @@ const useStyles = makeStyles(theme => ({
     alignItems: 'center'
   },
   differenceIcon: {
-    color: theme.palette.error.dark
+    color: theme.palette.success.dark
   },
   differenceValue: {
-    color: theme.palette.error.dark,
+    color: theme.palette.success.dark,
     marginRight: theme.spacing(1)
   }
 }));
 
-const Matches = props => {
+const MiniCard = props => {
   const { className, ...rest } = props;
 
   const classes = useStyles();
@@ -62,23 +62,21 @@ const Matches = props => {
               gutterBottom
               variant="body2"
             >
-              <h4>TOTAL MATCH PLAYED SO FAR (2016)</h4>
+              {props.data.header}
             </Typography>
-            <Typography variant="h4" color="inherit">577</Typography>
+            <Typography color="inherit" variant="h4" >
+              {props.data.value}
+            </Typography>
           </Grid>
-          <Grid item>
-            <Avatar className={classes.avatar}>
-              <SportsKabaddiIcon className={classes.icon} />
-            </Avatar>
-          </Grid>
+          {props.icon}
         </Grid>
       </CardContent>
     </Card>
   );
 };
 
-Matches.propTypes = {
+MiniCard.propTypes = {
   className: PropTypes.string
 };
 
-export default Matches;
+export default MiniCard;

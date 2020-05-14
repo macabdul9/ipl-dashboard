@@ -55,6 +55,7 @@ const SidebarNav = props => {
   const { pages, className, ...rest } = props;
 
   const classes = useStyles();
+  
 
   return (
       <List
@@ -77,6 +78,7 @@ const SidebarNav = props => {
               className={classes.button}
               component={CustomRouterLink}
               to={page.href}
+              aria-label="search"
               
             >
               <div className={classes.icon}>{page.icon}</div>
@@ -85,27 +87,6 @@ const SidebarNav = props => {
           </ListItem>
           )
         }
-        // if(page.title === 'EDA Notebook'){
-        //     component =  (
-        //       <ListItem
-        //       className={classes.item}
-        //       disableGutters
-        //       key={page.title}
-        //     >
-        //       <Button
-        //         onClick={() => window.open('www.google.com')}
-        //         activeClassName={classes.active}
-        //         className={classes.button}
-        //         component={CustomRouterLink}
-        //         to={page.href}
-                
-        //       >
-        //         <div className={classes.icon}>{page.icon}</div>
-        //         {page.title}
-        //       </Button>
-        //     </ListItem>
-        //     )
-        //   }
           else{
             component =  (
               <ListItem
@@ -118,6 +99,7 @@ const SidebarNav = props => {
                 className={classes.button}
                 component={CustomRouterLink}
                 to={page.href}
+                aria-label="search"
               >
                 <div className={classes.icon}>{page.icon}</div>
                 {page.title}

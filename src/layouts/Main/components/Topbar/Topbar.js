@@ -32,7 +32,6 @@ const Topbar = props => {
       className={clsx(classes.root, className)}
       color='primary'
       position='fixed'
-      // style={{ background: '#7a7d83' }}
     >
       <Toolbar>
         <RouterLink to="/">
@@ -40,33 +39,14 @@ const Topbar = props => {
             alt="Logo"
             src="/images/logos/logo.png"
           />
-          {/* <h3 style={{'color': 'white'}}>IPL-Dashboard</h3> */}
         </RouterLink>
         <div className={classes.flexGrow} />
-        <Hidden mdDown>
-          <IconButton color="inherit">
-            <Badge
-              badgeContent={notifications.length}
-              color="primary"
-              variant="dot"
-            >
-              {/* <NotificationsIcon /> */}
-              
-            </Badge>
-          </IconButton>
-            {/* <IconButton
-              className={classes.githubButton}
-              color="inherit"
-              onClick={() => window.open('https://www.github.com/macabdul9')}
-            >
-              <h5 style={{'marginRight':'20px'}}>Source Code</h5>
-              <GitHubIcon />
-            </IconButton> */}
-        </Hidden>
+      
         <Hidden lgUp>
           <IconButton
             color="inherit"
             onClick={onSidebarOpen}
+            aria-label="search"
           >
             <MenuIcon />
           </IconButton>

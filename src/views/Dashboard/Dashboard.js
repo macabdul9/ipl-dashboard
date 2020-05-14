@@ -1,28 +1,87 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/styles';
-import { Grid } from '@material-ui/core';
+import { Grid, Avatar} from '@material-ui/core';
 import {
-  Matches,
-  Runs,
-  Boundaries,
-  Balls,
+  MiniCard,
   CustomRadar,
   CustomPie,
   CustomBar,
   SeasonRuns,
-  Summary
+  Summary,
 } from './components';
 
+import AccessibilityNewIcon from '@material-ui/icons/AccessibilityNew';
+import SportsHandballIcon from '@material-ui/icons/SportsHandball';
+import SportsCricketIcon from '@material-ui/icons/SportsCricket';
+import SportsKabaddiIcon from '@material-ui/icons/SportsKabaddi';
+
+
 import data from './data.json';
+import miniCardData from './mini-card.json';
 
 const useStyles = makeStyles(theme => ({
   root: {
     padding: theme.spacing(4)
+  },
+  content: {
+    alignItems: 'center',
+    display: 'flex'
+  },
+  title: {
+    fontWeight: 700
+  },
+  avatar: {
+    backgroundColor: theme.palette.success.main,
+    height: 56,
+    width: 56
+  },
+  icon: {
+    height: 32,
+    width: 32
+  },
+  difference: {
+    marginTop: theme.spacing(2),
+    display: 'flex',
+    alignItems: 'center'
+  },
+  differenceIcon: {
+    color: theme.palette.success.dark
+  },
+  differenceValue: {
+    color: theme.palette.success.dark,
+    marginRight: theme.spacing(1)
   }
 }));
 
 const Dashboard = () => {
   const classes = useStyles();
+
+  const matchesIcon = (<Grid item>
+                        <Avatar className={classes.avatar}>
+                          <SportsKabaddiIcon className={classes.icon} />
+                        </Avatar>
+                      </Grid>)
+  const runsIcon = (
+          <Grid item>
+          <Avatar className={classes.avatar}>
+            <SportsCricketIcon className={classes.icon} />
+          </Avatar>
+        </Grid>
+  )
+  const ballsIcon = (
+      <Grid item>
+      <Avatar className={classes.avatar}>
+        <SportsHandballIcon className={classes.icon} />
+      </Avatar>
+    </Grid>
+  )
+  const boundariesIcons = (
+        <Grid item>
+            <Avatar className={classes.avatar}>
+              <AccessibilityNewIcon className={classes.icon} />
+            </Avatar>
+        </Grid>
+  )
 
   return (
     <div className={classes.root}>
@@ -37,7 +96,7 @@ const Dashboard = () => {
           xl={3}
           xs={12}
         >
-          <Matches />
+          <MiniCard data={miniCardData["matches"]} icon={matchesIcon} />
         </Grid>
         <Grid
           item
@@ -46,7 +105,7 @@ const Dashboard = () => {
           xl={3}
           xs={12}
         >
-          <Runs />
+          <MiniCard data={miniCardData["runs"]}  icon={runsIcon}/>
         </Grid>
         <Grid
           item
@@ -55,7 +114,7 @@ const Dashboard = () => {
           xl={3}
           xs={12}
         >
-          <Balls />
+          <MiniCard data={miniCardData["balls"]} icon={ballsIcon} />
         </Grid>
         <Grid
           item
@@ -64,7 +123,7 @@ const Dashboard = () => {
           xl={3}
           xs={12}
         >
-          <Boundaries />
+          <MiniCard data={miniCardData["boundaries"]} icon={boundariesIcons}/>
         </Grid>
 
         <Grid

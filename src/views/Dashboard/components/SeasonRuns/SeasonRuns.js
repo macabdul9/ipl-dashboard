@@ -45,11 +45,6 @@ const SeasonRuns = props => {
       {...rest}
       className={clsx(classes.root, className)}
     >
-      {/* <CardHeader
-        title="Total runs score in each match"
-        style={{'textAlign': 'center'}}
-        className={classes.avatar}
-      /> */}
       <CustomHeader header={props.data.header}/>
       <Divider />
       <CardContent>
@@ -61,14 +56,6 @@ const SeasonRuns = props => {
         </div>
       </CardContent>
       <Divider />
-      <CardActions className={classes.actions}>
-        <Button
-          color="primary"
-          size="small"
-          variant="text"
-        >
-        </Button>
-      </CardActions>
     </Card>
   );
 };
